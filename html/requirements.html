@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/requirements.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Project Management</title>
 </head>
 <body>
-    
+
+    <!-- Navigation Bar -->
+    <nav class="blue-grey darken-3">
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a href="dashboard.html" class="breadcrumb">Project Name</a>
+                <a href="#!" class="breadcrumb">Requirements</a>
+                <ul class="right">
+                    <li><a href="#modalNewRequirement" class="modal-trigger btn-flat white-text">Create New Requirement</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal for New Requirement -->
+    <div id="modalNewRequirement" class="modal blue-grey darken-3">
+        <div class="modal-content">
+            <h4 class="white-text">New Requirement</h4>
+            <!-- Requirement Information Goes Here -->
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Requirement Description" id="requirementDescription" type="text" class="white-text">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer blue-grey darken-4">
+            <a href="#!" class="modal-close btn-flat white-text">Create New Requirement</a>
+        </div>
+    </div>
+
+        <!-- Implementing jquery and MaterializeJS -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <script>
+            //Modal Toggle
+            $(document).ready(function(){
+                $('.modal').modal();
+            });
+
+            $(document).ready(function(){
+                $('select').formSelect();
+            });
+        </script>
+
 </body>
 </html>

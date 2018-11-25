@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Project Management</title>
 </head>
@@ -23,7 +23,127 @@
         </div>
     </nav>
 
+    <!-- Adds space between navbar and description card -->
+    <h1></h1>
+
+    <!-- Description Card -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card blue-grey darken-3">
+                    <div class="card-content white-text">
+                        <span class="flow-text">Description</span>
+                        <p class="projectDescriptionClass">Description Goes Here</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#modalDescription" class="modal-trigger white-text">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table of Links to other Pages -->
+    <!-- Row 1 -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Members -->
+            <div class="col s6">
+                <div class="card blue-grey darken-3">
+                    <div class="card-content white-text">
+                        <span class="flow-text">Members</span>
+                        <p class="membersText">Learn about everyone involved in the project</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/html/members.html" class="white-text">Members</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Requirements -->
+            <div class="col s6">
+                <div class="card blue-grey darken-3">
+                    <div class="card-content white-text">
+                        <span class="flow-text">Requirements</span>
+                        <p class="requirementsText">Learn what needs to happen to finish this project</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/html/requirements.html" class="white-text">Requirements</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+
+    <!-- Row 2 -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Risks -->
+            <div class="col s6">
+                    <div class="card blue-grey darken-3">
+                        <div class="card-content white-text">
+                            <span class="flow-text">Risks</span>
+                            <p class="risksText">Learn the risks about certain parts of the project</p>
+                        </div>
+                    <div class="card-action">
+                        <a href="/html/risks.html" class="white-text">Risks</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Hours -->
+            <div class="col s6">
+                <div class="card blue-grey darken-3">
+                    <div class="card-content white-text">
+                        <span class="flow-text">Hours</span>
+                        <p class="hoursText">Learn how long everyone has been working on the project</p>
+                    </div>
+                    <div class="card-action">
+                            <a href="/html/hours.html" class="white-text">Members</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+   <!-- Modal for Edit Description -->
+    <div id="modalDescription" class="modal blue-grey darken-3">
+        <div class="modal-content">
+            <h4 class="white-text">Edit Description</h4>
+            <!-- Textbox goes here -->
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="descriptionText" class="materialize-textarea white-text"></textarea>
+                            <label for="descriptionText" class="white-text"> Description</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <div class="modal-footer blue-grey darken-4">
+                <a href="#!" class="modal-close btn-flat white-text">Save</a>
+            </div>
+    </div>
+
+    <!-- Implementing jquery and MaterializeJS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
     <script>
+
+        // Modal Toggle
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+
     </script>
 </body>
 </html>

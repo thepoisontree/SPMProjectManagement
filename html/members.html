@@ -4,9 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/members.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Project Description</title>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <nav class="blue-grey darken-3">
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a href="/html/dashboard.html" class="breadcrumb">Project Name</a>
+                <a href="#!" class="breadcrumb">Members</a>
+                <ul class="right">
+                    <li><a href="#modalNewMember" class="modal-trigger btn-flat white-text">Create New Member</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal for New Members -->
+    <div id="modalNewMember" class="modal blue-grey darken-3">
+        <div class="modal-content">
+            <h4 class="white-text">New Member</h4>
+            <!-- Member Information goes here -->
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input placeholder="First Name" id="firstName" type="text" class="white-text">
+                        </div>
+                        <div class="input-field col s4">
+                            <input placeholder="Last Name" id="lastName" type="text" class="white-text">
+                        </div>
+                        <div class="input-field col s4">
+                            <input placeholder="Job Description" id="jobDescription" type="text" class="white-text">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer blue-grey darken-4">
+            <a href="#!" class="modal-close btn-flat white-text">Create Member</a>
+        </div>
+    </div>
+
+
+    <!-- Creating a list of members -->
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="center-align white-text"><h5>First Name</h5></th>
+                    <th class="center-align white-text"><h5>Last Name</h5></th>
+                    <th class="center-align white-text"><h5>Job Description</h5></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center-align white-text"><h6>Cody</h6></td>
+                    <td class="center-align white-text"><h6>Mullin</h6></td>
+                    <td class="center-align white-text"><h6>Project Manager</h6></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Implementing jquery and MaterializeJS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
+    <script>
+        //Modal Toggle
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+    </script>
+
 </body>
 </html>
